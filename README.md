@@ -1,7 +1,8 @@
 ## 若依-Oracle
 本仓库为[若依](https://gitee.com/y_project/RuoYi)的oracle版本 `(保持同步更新)`
 
-## Oracle版本交流群
+## 交流及反馈
+ 有bug可以提issues或者进群讨论
  [![oracle版本交流群](https://img.shields.io/badge/22271299-blue.svg)](https://shang.qq.com/wpa/qunwpa?idkey=e1ea16365440a9fa97ff72b0c73803e49a55dc68ae4c4181f3fb1da74928885e)  点击按钮入群。
 
 ## 平台简介
