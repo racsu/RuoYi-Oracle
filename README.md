@@ -1,8 +1,53 @@
 ## 若依-Oracle
 本仓库为[若依](https://gitee.com/y_project/RuoYi)的oracle版本 `(保持同步更新)`
 
+## 如何使用
+
+#### 1、准备工作
+~~~
+jdk>=1.8 (推荐1.8)
+oracle>=11g
+maven>=3.0
+开发工具：idea 或者 eclipse(大神请用记事本编程~~~手动狗头)
+~~~
+
+#### 2、下载代码
+下载地址： https://gitee.com/racsu/RuoYi-Oracle
+
+推荐使用git clone下载，有效进行代码更新
+
+#### 3、数据库
+
+使用dba权限的用户连接数据库,创建数据库
+```sql
+create user ry identified by ry;
+grant connect, resource to ry;
+```
+导入项目sql文件夹里的sql脚本：`ry_yyyymmdd(更新日期).sql` 和 `quartz.sql`
+
+#### 4、配置修改
+
+编辑resources目录下的application-druid.yml，修改数据库连接
+
+```yml
+url: 服务器地址
+username: 账号
+password: 密码
+```
+
+编辑resources目录下的application.yml，修改开发环境配置
+```yml
+port: 端口
+context-path: 部署路径
+```
+
+#### 5、启动项目
+执行文件`RuoYi-Oracle/ruoyi-admin/src/main/java/com/ruoyi/RuoYiApplication.java`的main函数即可。
+
+
+
 ## 交流及反馈
- 有bug可以提issues或者进群讨论
+ 有`bug`可以提`issues`或者进群讨论
  [![oracle版本交流群](https://img.shields.io/badge/22271299-blue.svg)](https://shang.qq.com/wpa/qunwpa?idkey=e1ea16365440a9fa97ff72b0c73803e49a55dc68ae4c4181f3fb1da74928885e)  点击按钮入群。
 
 ## 平台简介
