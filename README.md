@@ -50,6 +50,11 @@ context-path: 部署路径
  有`bug`可以提`issues`或者进群讨论
  [![oracle版本交流群](https://img.shields.io/badge/22271299-blue.svg)](https://shang.qq.com/wpa/qunwpa?idkey=e1ea16365440a9fa97ff72b0c73803e49a55dc68ae4c4181f3fb1da74928885e)  点击按钮入群。
 
+## 文档
+参考 [若依官方文档](http://doc.ruoyi.vip) http://doc.ruoyi.vip
+
+# 以下为若依原版介绍
+
 ## 平台简介
 
 一直想做一款后台管理系统，看了很多优秀的开源项目但是发现没有合适的。于是利用空闲休息时间开始自己写了一套后台系统。如此有了若依。她可以用于所有的Web应用程序，如网站管理后台，网站会员中心，CMS，CRM，OA。所有前端后台代码封装过后十分精简易上手，出错概率低。同时支持移动客户端访问。系统会陆续更新一些实用功能。
