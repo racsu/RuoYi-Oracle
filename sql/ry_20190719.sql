@@ -9,11 +9,11 @@ create sequence seq_sys_dept
  cache 20;
 
 create table sys_dept (
-  dept_id 			number 		    not null,
-  parent_id 		number		    default 0,
+  dept_id 			number(20)  		    not null,
+  parent_id 		number	(20)	    default 0,
   ancestors 		varchar2(50)    default '',
   dept_name 		varchar2(30) 	default '',
-  order_num 		number          default 0,
+  order_num 		number(4)          default 0,
   leader            varchar2(20)    default null,
   phone             varchar2(11)    default null,
   email             varchar2(50)    default null,
@@ -68,8 +68,8 @@ create sequence seq_sys_user
  cache 20;
 
 create table sys_user (
-  user_id 			number 		    not null,
-  dept_id 			number 		    default null,
+  user_id 			number(20) 		    not null,
+  dept_id 			number(20) 		    default null,
   login_name 		varchar2(30) 	not null,
   user_name 		varchar2(30) 	not null,
   user_type 		varchar2(2) 	default '00',
@@ -133,10 +133,10 @@ create sequence seq_sys_post
 
 create table sys_post
 (
-  post_id 			number 		    not null,
+  post_id 			number(20) 		    not null,
   post_code         varchar2(64)    not null,
   post_name         varchar2(50)    not null,
-  post_sort         number          not null,
+  post_sort         number(4)          not null,
   status            char(1)         not null,
   create_by         varchar2(64)    default '',
   create_time       date,
@@ -179,10 +179,10 @@ create sequence seq_sys_role
  cache 20;
 
 create table sys_role (
-  role_id 			number          not null,
+  role_id 			number(20)          not null,
   role_name 		varchar2(30) 	not null,
   role_key 		    varchar2(100) 	not null,
-  role_sort         number          not null,
+  role_sort         number(4)          not null,
   data_scope        char(1) 	    default '1',
   status 			char(1) 		not null,
   del_flag			char(1) 		default '0',
@@ -227,10 +227,10 @@ create sequence seq_sys_menu
  cache 20;
 
 create table sys_menu (
-  menu_id 			number 		    not null,
+  menu_id 			number(20)		    not null,
   menu_name 		varchar2(50) 	not null,
-  parent_id 		number          default 0,
-  order_num 		number          default 0,
+  parent_id 		number(20)          default 0,
+  order_num 		number(4)          default 0,
   url 				varchar2(200) 	default '#',
   target            varchar2(20)     default '',
   menu_type 		char(1) 		default '',
@@ -370,8 +370,8 @@ insert into sys_menu values('1060', '生成代码', '114', '5', '#', '',  'F', '
 -- 6、用户和角色关联表  用户N-1角色
 -- ----------------------------
 create table sys_user_role (
-  user_id 	number  not null,
-  role_id 	number  not null
+  user_id 	number(20)  not null,
+  role_id 	number(20)  not null
 );
 
 alter table sys_user_role add constraint pk_sys_user_role primary key (user_id, role_id);
@@ -391,8 +391,8 @@ insert into sys_user_role values ('2', '2');
 -- 7、角色和菜单关联表  角色1-N菜单
 -- ----------------------------
 create table sys_role_menu (
-  role_id 	number  not null,
-  menu_id 	number  not null
+  role_id 	number(20)  not null,
+  menu_id 	number(20)  not null
 );
 
 alter table sys_role_menu add constraint pk_sys_role_menu primary key (role_id, menu_id);
@@ -491,8 +491,8 @@ insert into sys_role_menu values ('2', '1060');
 -- 8、角色和部门关联表  角色1-N部门
 -- ----------------------------
 create table sys_role_dept (
-  role_id 	number  not null,
-  dept_id 	number  not null
+  role_id 	number(20)  not null,
+  dept_id 	number(20)  not null
 );
 
 alter table sys_role_dept add constraint pk_sys_role_dept primary key (role_id, dept_id);
@@ -513,8 +513,8 @@ insert into sys_role_dept values ('2', '105');
 -- ----------------------------
 create table sys_user_post
 (
-	user_id number  not null,
-	post_id number  not null
+	user_id number(20)  not null,
+	post_id number(20)  not null
 );
 
 alter table sys_user_post add constraint pk_sys_user_post primary key (user_id, post_id);
@@ -541,18 +541,18 @@ create sequence seq_sys_oper_log
  cache 20;
 
 create table sys_oper_log (
-  oper_id 			number          not null ,
+  oper_id 			number(20)          not null ,
   title             varchar2(50)    default '',
-  business_type     number          default 0,
+  business_type     number(2)          default 0,
   method            varchar2(100)   default '',
-  operator_type     number          default 0,
+  operator_type     number(1)          default 0,
   oper_name 	    varchar2(50)    default '',
   dept_name 		varchar2(50)    default '',
   oper_url 		    varchar2(255) 	default '',
   oper_ip 			varchar2(50) 	default '',
   oper_location     varchar2(255)   default '',
   oper_param 		varchar2(2000) 	default '',
-  status 			number 		    default 0,
+  status 			number(1) 		    default 0,
   error_msg 		varchar2(2000) 	default '' ,
   oper_time 		date
 );
@@ -588,7 +588,7 @@ create sequence seq_sys_dict_type
 
 create table sys_dict_type
 (
-	dict_id          number          not null,
+	dict_id          number(20)          not null,
 	dict_name        varchar2(100)   default '',
 	dict_type        varchar2(100)   default '',
   status 			 char(1) 		 default '0',
@@ -637,8 +637,8 @@ create sequence seq_sys_dict_data
 
 create table sys_dict_data
 (
-	dict_code        number          not null,
-	dict_sort        number          default 0,
+	dict_code        number(20)          not null,
+	dict_sort        number(4)          default 0,
 	dict_label       varchar2(100)   default '',
 	dict_value       varchar2(100)   default '',
 	dict_type        varchar2(100)   default '',
@@ -712,7 +712,7 @@ create sequence seq_sys_config
  cache 20;
 
 create table sys_config (
-	config_id 		   number        not null,
+	config_id 		   number(5)        not null,
 	config_name        varchar2(100) default '',
 	config_key         varchar2(100) default '',
 	config_value       varchar2(100) default '',
@@ -753,7 +753,7 @@ create sequence seq_sys_logininfor
  cache 20;
 
 create table sys_logininfor (
-  info_id 		 number        not null,
+  info_id 		 number(20)        not null,
   login_name 	 varchar2(50)   default '',
   ipaddr 		 varchar2(50)   default '',
   login_location varchar2(255)  default '',
@@ -791,7 +791,7 @@ create table sys_user_online (
   status      	    varchar2(10)  default '',
   start_timestamp 	date,
   last_access_time  date,
-  expire_time 	    number 		 default 0
+  expire_time 	    number(5) 		 default 0
 );
 
 alter table sys_user_online add constraint pk_sys_user_online primary key (sessionId);
@@ -820,7 +820,7 @@ create sequence seq_sys_job
  cache 20;
 
 create table sys_job (
-  job_id 		      number 	     not null,
+  job_id 		      number(20) 	     not null,
   job_name            varchar2(64)   default '',
   job_group           varchar2(64)   default '',
   invoke_target       varchar2(500)  not null ,
@@ -868,7 +868,7 @@ create sequence seq_sys_job_log
  cache 20;
 
 create table sys_job_log (
-  job_log_id          number	     not null,
+  job_log_id          number(20)	     not null,
   job_name            varchar2(64)   not null,
   job_group           varchar2(64)   not null,
   method_name         varchar2(500),
@@ -904,7 +904,7 @@ create sequence seq_sys_notice
  cache 20;
 
 create table sys_notice (
-  notice_id 		number 		    not null,
+  notice_id 		number(4) 		    not null,
   notice_title 		varchar2(50) 	not null,
   notice_type 		char(1) 	    not null,
   notice_content    varchar2(2000)  default null,
