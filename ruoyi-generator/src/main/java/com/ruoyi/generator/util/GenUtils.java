@@ -229,6 +229,8 @@ public class GenUtils
         javaTypeMap.put("char", "String");
         javaTypeMap.put("varchar", "String");
         javaTypeMap.put("varchar2", "String");
+        javaTypeMap.put("nvarchar", "String");
+        javaTypeMap.put("nvarchar2", "String");
         javaTypeMap.put("tinytext", "String");
         javaTypeMap.put("text", "String");
         javaTypeMap.put("mediumtext", "String");
