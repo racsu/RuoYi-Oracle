@@ -712,7 +712,7 @@ create sequence seq_sys_config
  cache 20;
 
 create table sys_config (
-	config_id 		   number(5)        not null,
+	config_id 		   number(20)        not null,
 	config_name        varchar2(100) default '',
 	config_key         varchar2(100) default '',
 	config_value       varchar2(100) default '',
@@ -791,7 +791,7 @@ create table sys_user_online (
   status      	    varchar2(10)  default '',
   start_timestamp 	date,
   last_access_time  date,
-  expire_time 	    number(5) 		 default 0
+  expire_time 	    number(10) 		 default 0
 );
 
 alter table sys_user_online add constraint pk_sys_user_online primary key (sessionId);
@@ -904,7 +904,7 @@ create sequence seq_sys_notice
  cache 20;
 
 create table sys_notice (
-  notice_id 		number(4) 		    not null,
+  notice_id 		number(20) 		    not null,
   notice_title 		varchar2(50) 	not null,
   notice_type 		char(1) 	    not null,
   notice_content    varchar2(2000)  default null,
