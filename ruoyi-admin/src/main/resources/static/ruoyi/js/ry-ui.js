@@ -164,7 +164,7 @@
         			        title: false,
         			        type: 1,
         			        closeBtn: true,
-        			        shadeClose: true,
+        			        shadeClose: $.common.isEmpty(options.shadeClose) ? true : options.shadeClose,
         			        area: ['auto', 'auto'],
         			        content: "<img src='" + src + "' height='" + height + "' width='" + width + "'/>"
         			    });
