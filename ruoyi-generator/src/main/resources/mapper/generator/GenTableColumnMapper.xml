@@ -60,7 +60,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
           ORDER BY temp.column_id
 	</select>
     
-    <insert id="insertGenTableColumn" parameterType="GenTableColumn" useGeneratedKeys="true" keyProperty="columnId">
+    <insert id="insertGenTableColumn" parameterType="GenTableColumn">
         <selectKey keyProperty="columnId" resultType="long" order="BEFORE">
             SELECT seq_gen_table_column.NEXTVAL as columnId FROM DUAL
         </selectKey>

@@ -72,7 +72,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		and dt.table_name = uo.object_name
 		and uo.object_type = 'TABLE'
 		AND dt.table_name NOT LIKE 'QRTZ_%' AND dt.table_name NOT LIKE 'GEN_%'
-		AND dt.table_name NOT IN (select table_name from gen_table)
+		AND lower(dt.table_name) NOT IN (select table_name from gen_table)
 		<if test="tableName != null and tableName != ''">
 			AND lower(dt.table_name)  like concat(concat('%', #{tableName}), '%')
 		</if>
@@ -122,7 +122,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		where t.table_name = #{tableName}
 	</select>
 	
-	<insert id="insertGenTable" parameterType="GenTable" useGeneratedKeys="true" keyProperty="tableId">
+	<insert id="insertGenTable" parameterType="GenTable">
 		<selectKey keyProperty="tableId" resultType="long" order="BEFORE">
 			SELECT seq_gen_table.NEXTVAL as tableId FROM DUAL
 		</selectKey>
