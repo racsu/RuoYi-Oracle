@@ -44,6 +44,12 @@ context-path: 部署路径
 #### 5、启动项目
 执行文件`RuoYi-Oracle/ruoyi-admin/src/main/java/com/ruoyi/RuoYiApplication.java`的main函数即可。
 
+## oracle版本常见问题
+
+#### 生成的代码报错，找不到seq_xxx_xxx
+
+oracle无主键自增，代码生成只要勾选了主键自增，则默认使用序列seq_xxx（表名）值作为主键。新建对应的序列即可
+
 
 
 ## 交流及反馈
