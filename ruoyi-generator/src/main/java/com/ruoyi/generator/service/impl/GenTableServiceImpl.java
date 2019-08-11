@@ -241,6 +241,9 @@ public class GenTableServiceImpl implements IGenTableService
     {
         // 查询表信息
         GenTable table = genTableMapper.selectGenTableByName(tableName);
+        // 获取菜单id序列，用于生成菜单sql语句
+        long menuId = genTableMapper.selectMenuId();
+        table.setMenuId(menuId);
         // 查询列信息
         List<GenTableColumn> columns = table.getColumns();
         setPkColumn(table, columns);

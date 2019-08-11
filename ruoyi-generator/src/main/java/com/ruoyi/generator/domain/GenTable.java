@@ -73,6 +73,9 @@ public class GenTable extends BaseEntity
     /** 树名称字段 */
     private String treeName;
 
+    /** 菜单id **/
+    private Long menuId;
+
     public Long getTableId()
     {
         return tableId;
@@ -251,5 +254,13 @@ public class GenTable extends BaseEntity
     public static boolean isCrud(String tplCategory)
     {
         return tplCategory != null && StringUtils.equals(GenConstants.TPL_CRUD, tplCategory);
+    }
+
+    public Long getMenuId() {
+        return menuId;
+    }
+
+    public void setMenuId(Long menuId) {
+        this.menuId = menuId;
     }
 }

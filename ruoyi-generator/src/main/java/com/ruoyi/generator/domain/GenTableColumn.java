@@ -305,7 +305,14 @@ public class GenTableColumn extends BaseEntity
 
     public String getDictType()
     {
-        return dictType;
+        if (StringUtils.isEmpty(dictType))
+        {
+            return StringUtils.EMPTY;
+        }
+        else
+        {
+            return dictType;
+        }
     }
 
     public void setSort(Integer sort)

@@ -121,6 +121,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			 LEFT JOIN gen_table_column c ON t.table_id = c.table_id
 		where t.table_name = #{tableName}
 	</select>
+
+	<select id="selectMenuId" resultType="java.lang.Long">
+	    SELECT seq_sys_menu.nextval FROM dual
+	</select>
 	
 	<insert id="insertGenTable" parameterType="GenTable">
 		<selectKey keyProperty="tableId" resultType="long" order="BEFORE">

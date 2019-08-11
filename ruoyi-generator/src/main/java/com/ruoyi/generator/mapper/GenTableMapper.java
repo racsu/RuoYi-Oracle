@@ -50,6 +50,13 @@ public interface GenTableMapper
      */
     public GenTable selectGenTableByName(String tableName);
 
+
+    /**
+     * 获取菜单id
+     * @return seq_sys_menu.nextval
+     */
+    public long selectMenuId();
+
     /**
      * 新增业务
      * 
