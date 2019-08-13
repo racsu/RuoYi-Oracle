@@ -872,7 +872,6 @@ create table sys_job_log (
   job_name            varchar2(64)   not null,
   job_group           varchar2(64)   not null,
   invoke_target         varchar2(500) not null ,
-  method_params       varchar2(200)  default null,
   job_message         varchar2(500),
   status              char(1)        default '0',
   exception_info      varchar2(2000) default '',
@@ -886,7 +885,6 @@ comment on column sys_job_log.job_log_id        is '日志主键seq_sys_job_log.
 comment on column sys_job_log.job_name          is '任务名称';
 comment on column sys_job_log.job_group         is '任务组名';
 comment on column sys_job_log.invoke_target       is '调用目标字符串';
-comment on column sys_job_log.method_params     is '方法参数';
 comment on column sys_job_log.job_message       is '日志信息';
 comment on column sys_job_log.status            is '执行状态（0正常 1失败）';
 comment on column sys_job_log.exception_info    is '异常信息';
