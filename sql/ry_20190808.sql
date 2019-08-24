@@ -545,6 +545,7 @@ create table sys_oper_log (
   title             varchar2(50)    default '',
   business_type     number(2)          default 0,
   method            varchar2(100)   default '',
+  request_method    varchar(10)     default '',
   operator_type     number(1)          default 0,
   oper_name 	    varchar2(50)    default '',
   dept_name 		varchar2(50)    default '',
@@ -564,6 +565,7 @@ comment on column sys_oper_log.oper_id       is '日志主键seq_sys_oper_log.ne
 comment on column sys_oper_log.title         is '模块标题';
 comment on column sys_oper_log.business_type is '业务类型（0其它 1新增 2修改 3删除）';
 comment on column sys_oper_log.method        is '方法名称';
+comment on column sys_oper_log.request_method is '请求方式';
 comment on column sys_oper_log.operator_type is '操作类别（0其它 1后台用户 2手机端用户）';
 comment on column sys_oper_log.oper_name     is '操作人员';
 comment on column sys_oper_log.dept_name     is '部门名称';
