@@ -52,7 +52,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			<if test="title != null and title != ''">#{title},</if>
 			<if test="businessType != null and businessType != ''">#{businessType},</if>
 			<if test="method != null and method != ''">#{method},</if>
-			<if test="requestMethod != null and requestMethod != ''">#{request_method},</if>
+			<if test="requestMethod != null and requestMethod != ''">#{requestMethod},</if>
 			<if test="operatorType != null and operatorType != ''">#{operatorType},</if>
 			<if test="operName != null and operName != ''">#{operName},</if>
 			<if test="deptName != null and deptName != ''">#{deptName},</if>
