@@ -1047,3 +1047,16 @@ comment on column gen_table_column.create_by      is '创建者';
 comment on column gen_table_column.create_time    is '创建时间';
 comment on column gen_table_column.update_by      is '更新者';
 comment on column gen_table_column.update_time    is '更新时间';
+
+
+-- ----------------------------
+-- 函数 ，代替mysql的find_in_set
+-- 例如： select * from sys_dept where FIND_IN_SET (101,ancestors) <> 0
+-- mysql可接受0或其它number做为where 条件，oracle只接受表达式做为where 条件
+-- ----------------------------
+create or replace function find_in_set(arg1 in varchar2,arg2 in varchar)
+return number is Result number;
+begin
+select instr(','||arg2||',' , ','||arg1||',') into Result from dual;
+return(Result);
+end find_in_set;
