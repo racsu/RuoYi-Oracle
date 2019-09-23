@@ -553,6 +553,7 @@ create table sys_oper_log (
   oper_ip 			varchar2(50) 	default '',
   oper_location     varchar2(255)   default '',
   oper_param 		varchar2(2000) 	default '',
+  json_result 		varchar2(2000) 	default '',
   status 			number(1) 		    default 0,
   error_msg 		varchar2(2000) 	default '' ,
   oper_time 		date
@@ -573,6 +574,7 @@ comment on column sys_oper_log.oper_url      is '请求URL';
 comment on column sys_oper_log.oper_ip       is '主机地址';
 comment on column sys_oper_log.oper_location is '操作地点';
 comment on column sys_oper_log.oper_param    is '请求参数';
+comment on column sys_oper_log.json_result   is '返回参数';
 comment on column sys_oper_log.status        is '操作状态（0正常 1异常）';
 comment on column sys_oper_log.error_msg     is '错误消息';
 comment on column sys_oper_log.oper_time     is '操作时间';

@@ -124,6 +124,6 @@ oracle无主键自增，代码生成只要勾选了主键自增，则默认使�
 
 ## 请维护者喝杯咖啡
 <div>
-<img src="http://pwo5yxkbb.bkt.clouddn.com/007FMAUigy1g68fpr0s1lj30g40g4q58.jpg" width="350" height="350">
-<img src="http://pwo5yxkbb.bkt.clouddn.com/007FMAUigy1g68focark1j30g40g4wfe1.jpg" width="350" height="350">
+<img src="http://img.racinfo.cn/007FMAUigy1g68fpr0s1lj30g40g4q58.jpg" width="350" height="350">
+<img src="http://img.racinfo.cn/007FMAUigy1g68focark1j30g40g4wfe1.jpg" width="350" height="350">
 </div>
