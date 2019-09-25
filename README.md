@@ -1,6 +1,10 @@
 ## 若依-Oracle
 本仓库为[若依](https://gitee.com/y_project/RuoYi)的oracle版本 `(保持同步更新)`
 
+演示地址[RuoYi-Oracle](http://racinfo.cn)
+
+用户名 admin 密码admin123
+
 她可以用于所有的Web应用程序，如网站管理后台，网站会员中心，CMS，CRM，OA。所有前端后台代码封装过后十分精简易上手，出错概率低。
 ## 内置功能
 1.  用户管理：用户是系统操作者，该功能主要完成系统用户配置。
