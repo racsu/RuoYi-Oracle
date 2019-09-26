@@ -32,7 +32,7 @@
 		<jsoup.version>1.11.3</jsoup.version>
 		<poi.version>3.17</poi.version>
 		<velocity.version>1.7</velocity.version>
-		<oracle.version>11.2.0.3</oracle.version>
+		<oracle.version>10.2.0.1.0</oracle.version>
 	</properties>
 	
     <!-- 依赖声明 -->
