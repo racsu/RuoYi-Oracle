@@ -32,7 +32,7 @@
 		<jsoup.version>1.11.3</jsoup.version>
 		<poi.version>3.17</poi.version>
 		<velocity.version>1.7</velocity.version>
-		<oracle.version>10.2.0.1.0</oracle.version>
+		<oracle.version>10.2.0.4.0</oracle.version>
 	</properties>
 	
     <!-- 依赖声明 -->
@@ -247,6 +247,7 @@
     </build>
 
 	<repositories>
+		<!--阿里云镜像仓库-->
 		<repository>
 			<id>public</id>
 			<name>aliyun nexus</name>
@@ -254,6 +255,15 @@
 			<releases>
 				<enabled>true</enabled>
 			</releases>
+		</repository>
+		<!--oracle驱动没有发布到中央仓库，只能从此仓库下载-->
+		<repository>
+			<id>jeecg</id>
+			<name>jeecg Repository</name>
+			<url>http://maven.jeewx.com/nexus/content/repositories/jeecg</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
 		</repository>
 	</repositories>
 
