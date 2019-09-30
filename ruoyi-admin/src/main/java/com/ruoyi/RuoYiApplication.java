@@ -25,6 +25,8 @@ public class RuoYiApplication
                 " |  |\\ \\  |  ||   |(_,_)'         \n" +
                 " |  | \\ `'   /|   `-'  /           \n" +
                 " |  |  \\    /  \\      /           \n" +
-                " ''-'   `'-'    `-..-'              ");
+                " ''-'   `'-'    `-..-'              \n" +
+                "项目主页：https://gitee.com/racsu/RuoYi-Oracle，你的点赞鼓励，是作者前进的动力\n" +
+                "框架BUG描述清楚并提交：https://gitee.com/racsu/RuoYi-Oracle/issues，连接发群里，群号：22271299，作者一定会答复。");
     }
 }

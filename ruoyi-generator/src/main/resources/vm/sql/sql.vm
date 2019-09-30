@@ -15,6 +15,9 @@ values(seq_sys_menu.nextval, '${functionName}修改', ${table.menuId}, '3',  '#'
 insert into sys_menu  (menu_id, menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
 values(seq_sys_menu.nextval, '${functionName}删除', ${table.menuId}, '4',  '#',  'F', '0', '${permissionPrefix}:remove',       '#', 'admin', sysdate, 'ry', sysdate, '');
 
+insert into sys_menu  (menu_id, menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values(seq_sys_menu.nextval, '${functionName}导出', ${table.menuId}, '5',  '#',  'F', '0', '${permissionPrefix}:export',       '#', 'admin', sysdate, 'ry', sysdate, '');
+
 #if($pkColumn.increment)
 -- ${tableName}主键序列
 create sequence seq_${tableName}
