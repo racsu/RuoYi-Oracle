@@ -154,7 +154,7 @@ public class GenUtils
 
     /**
      * 表名转换成Java类名
-     *
+     * 
      * @param tableName 表名称
      * @return 类名
      */
@@ -221,7 +221,7 @@ public class GenUtils
 
     /**
      * 获取空数组列表
-     *
+     * 
      * @param length 长度
      * @return 数组信息
      */
