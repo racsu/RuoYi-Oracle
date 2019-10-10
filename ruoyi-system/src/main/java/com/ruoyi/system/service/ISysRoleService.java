@@ -130,6 +130,7 @@ public interface ISysRoleService
      * @return 结果
      */
     public int changeStatus(SysRole role);
+
     /**
      * 取消授权用户角色
      * 
@@ -146,7 +147,7 @@ public interface ISysRoleService
      * @return 结果
      */
     public int deleteAuthUsers(Long roleId, String userIds);
-    
+
     /**
      * 批量选择授权用户角色
      * 

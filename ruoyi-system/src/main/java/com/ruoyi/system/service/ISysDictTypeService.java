@@ -36,7 +36,7 @@ public interface ISysDictTypeService
 
     /**
      * 根据字典类型查询信息
-     *
+     * 
      * @param dictType 字典类型
      * @return 字典类型
      */
@@ -85,7 +85,7 @@ public interface ISysDictTypeService
 
     /**
      * 查询字典类型树
-     *
+     * 
      * @param dictType 字典类型
      * @return 所有字典类型
      */
