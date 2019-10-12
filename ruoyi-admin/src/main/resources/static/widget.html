@@ -49,17 +49,7 @@
 
     var iParameter = self.location.search.slice(1);
 
-    var iName = iParameter.match(/&?repository=([^&]+)/),
-        iHidden = iParameter.match(/&?hidden=([^&]+)/);
-
-    if ((iHidden || '')[1])
-        Add_Event.call(self,  'load',  function () {
-            iHidden = iHidden[1].split(',');
-
-            for (var i = 0;  iHidden[i];  i++)
-                document.querySelector('.osc_git_' + iHidden[i] + 's')
-                    .style.display = 'none';
-        });
+    var iName = iParameter.match(/&?repository=([^&]+)/);
 
     try {
         self.parent.name || self.frameElement.id;
@@ -86,7 +76,8 @@
 
     }).write(
         '<script src="https://gitee.com/'  +
-        (iName ? iName[1] : 'Tech_Query/Git-OSC_Repository-Widget')  +
-        '/widget_preview"></script\>'
+        (iName ? iName[1] : 'racsu/RuoYi-Oracle')  +
+        '/widget_preview">' +
+        '</script\>'
     );
 </script>
