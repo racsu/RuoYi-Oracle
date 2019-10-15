@@ -1,3 +1,9 @@
+### [腾讯云服务器双十一必抢活动 1H2G 88元/年 错过等一年~ 点我购买](https://cloud.tencent.com/act/cps/redirect?redirect=1048&cps_key=b680c80ccdf523f726c8f97957c3117a&from=console) 
+
+腾讯已经开始动手了 阿里云估计也快了 
+
+### [阿里新用户专享2H1G 点我购买](https://www.aliyun.com/acts/hi-group-buying?userCode=se6p9xeg&aly_as=Ueb5EfZ5&source=5176.11533457&userCode=771memkj&type=copy) 
+
 ## 若依-Oracle
 本仓库为[若依](https://gitee.com/y_project/RuoYi)的oracle版本 `(保持同步更新)`
 
