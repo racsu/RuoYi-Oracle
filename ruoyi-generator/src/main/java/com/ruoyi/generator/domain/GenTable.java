@@ -263,4 +263,18 @@ public class GenTable extends BaseEntity
     public void setMenuId(Long menuId) {
         this.menuId = menuId;
     }
+
+    public boolean isSuperColumn(String javaField)
+    {
+        return isSuperColumn(this.tplCategory, javaField);
+    }
+
+    public static boolean isSuperColumn(String tplCategory, String javaField)
+    {
+        if (isTree(tplCategory))
+        {
+            StringUtils.equalsAnyIgnoreCase(javaField, GenConstants.TREE_ENTITY);
+        }
+        return StringUtils.equalsAnyIgnoreCase(javaField, GenConstants.BASE_ENTITY);
+    }
 }
