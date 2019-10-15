@@ -8,7 +8,10 @@
 ### [阿里云新用户专享2H1G 99元/年 点我购买](https://www.aliyun.com/acts/hi-group-buying?userCode=se6p9xeg&aly_as=Ueb5EfZ5&source=5176.11533457&userCode=771memkj&type=copy) 
 
 ## 若依-Oracle
-本仓库为[若依](https://gitee.com/y_project/RuoYi)的oracle版本 `(保持同步更新)`
+
+本仓库为[若依](https://gitee.com/y_project/RuoYi)的oracle版本 `(保持同步更新)` 
+
+如需单应用版本请切换[fast分支](https://gitee.com/racsu/RuoYi-Oracle/tree/fast/) 在此感谢[风立](https://gitee.com/baha)同学
 
 演示地址[RuoYi-Oracle](http://racinfo.cn)
 
