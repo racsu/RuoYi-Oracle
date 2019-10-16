@@ -1,11 +1,8 @@
-### [腾讯云服务器双十一必抢活动 1H2G 88元/年 错过等一年~ 点我购买](https://cloud.tencent.com/act/cps/redirect?redirect=1048&cps_key=b680c80ccdf523f726c8f97957c3117a&from=console) 
+### [腾讯云服务器双十一必抢活动 1核2G 88元/年 错过等一年~ 点我购买](https://cloud.tencent.com/act/cps/redirect?redirect=1048&cps_key=b680c80ccdf523f726c8f97957c3117a&from=console) 
 
-腾讯已经开始动手了 阿里云估计也快了 
+腾讯已经开始拼刺刀了 优惠力度很大，除88元服务器外，2核4G 998元/3年 也是超值！！！ 
 
-### [阿里云学生专享1H2G （24周岁以下自动通过学生认证）9.5元/月 点我购买](https://promotion.aliyun.com/ntms/act/campus2018.html?source=5176.11533457&userCode=771memkj&type=copy) 
-
-
-### [阿里云新用户专享2H1G 99元/年 点我购买](https://www.aliyun.com/acts/hi-group-buying?userCode=se6p9xeg&aly_as=Ueb5EfZ5&source=5176.11533457&userCode=771memkj&type=copy) 
+### [阿里云学生专享1核2G （24周岁以下自动通过学生认证）9.5元/月 点我购买](https://promotion.aliyun.com/ntms/act/campus2018.html?source=5176.11533457&userCode=771memkj&type=copy) 
 
 ## 若依-Oracle
 
@@ -132,13 +129,7 @@ context-path: 部署路径
  有`bug`可以提`issues`或者进群讨论
  [![oracle版本交流群](https://img.shields.io/badge/22271299-blue.svg)](https://shang.qq.com/wpa/qunwpa?idkey=e1ea16365440a9fa97ff72b0c73803e49a55dc68ae4c4181f3fb1da74928885e)  点击按钮入群。
 
-## oracle版本常见问题
-
-#### 生成的代码报错，找不到seq_xxx_xxx
-
-oracle无主键自增，代码生成只要勾选了主键自增，则默认使用序列seq_xxx（表名）值作为主键。新建对应的序列即可
-
-## 请维护者喝杯咖啡
+## 请作者喝杯咖啡
 <div>
 <img src="http://img.racinfo.cn/007FMAUigy1g68fpr0s1lj30g40g4q58.jpg" width="350" height="350">
 <img src="http://img.racinfo.cn/007FMAUigy1g68focark1j30g40g4wfe1.jpg" width="350" height="350">
