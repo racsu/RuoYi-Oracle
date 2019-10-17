@@ -15,6 +15,13 @@
 用户名 admin 密码admin123
 
 她可以用于所有的Web应用程序，如网站管理后台，网站会员中心，CMS，CRM，OA。所有前端后台代码封装过后十分精简易上手，出错概率低。
+
+##若依Oracle版本专属交流群
+ 欢迎进群和各路大佬交流 [![oracle版本交流群](https://img.shields.io/badge/22271299-blue.svg)](https://shang.qq.com/wpa/qunwpa?idkey=e1ea16365440a9fa97ff72b0c73803e49a55dc68ae4c4181f3fb1da74928885e)  (点击左侧图标进群)
+
+<img src="http://img.racinfo.cn/ruoyi-oracle-qun.png" width="350">
+
+
 ## 内置功能
 1.  用户管理：用户是系统操作者，该功能主要完成系统用户配置。
 2.  部门管理：配置系统组织机构（公司、部门、小组），树结构展现支持数据权限。
@@ -124,10 +131,6 @@ context-path: 部署路径
         <td><img src="https://oscimg.oschina.net/oscnet/5f3d39a141f21f81b90536f391b8408f1fa.jpg"/></td>
     </tr>
 </table>
-
-## 交流及反馈
- 有`bug`可以提`issues`或者进群讨论
- [![oracle版本交流群](https://img.shields.io/badge/22271299-blue.svg)](https://shang.qq.com/wpa/qunwpa?idkey=e1ea16365440a9fa97ff72b0c73803e49a55dc68ae4c4181f3fb1da74928885e)  点击按钮入群。
 
 ## 请作者喝杯咖啡
 <div>
