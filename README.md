@@ -21,6 +21,10 @@
 
 <img src="http://img.racinfo.cn/ruoyi-oracle-qun.png" width="350">
 
+## 微信公众号
+ 欢迎扫码关注，获取各种学习资料
+ 
+<img src="http://img.racinfo.cn/wxqrcode.jpg" width="370">
 
 ## 内置功能
 1.  用户管理：用户是系统操作者，该功能主要完成系统用户配置。
