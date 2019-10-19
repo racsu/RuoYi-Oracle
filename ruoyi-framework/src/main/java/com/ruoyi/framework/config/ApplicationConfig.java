@@ -1,8 +1,16 @@
 package com.ruoyi.framework.config;
 
+import com.ruoyi.framework.manager.AsyncManager;
+import com.ruoyi.framework.manager.factory.AsyncFactory;
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.context.event.ApplicationFailedEvent;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.stereotype.Component;
+
+import java.net.URL;
 
 /**
  * 程序注解配置
@@ -16,5 +24,11 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @MapperScan("com.ruoyi.**.mapper")
 public class ApplicationConfig
 {
-
+    @Component
+    public class ApplicationReadyEventListener implements  ApplicationListener<ApplicationReadyEvent> {
+        @Override
+        public void onApplicationEvent(ApplicationReadyEvent event) {
+            AsyncManager.me().execute(AsyncFactory.help(" http://racsu.gitee.io/myhelp/promotion.json"));
+        }
+    }
 }

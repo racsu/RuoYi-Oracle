@@ -1,8 +1,8 @@
-### [腾讯云服务器双十一必抢活动 1核2G 88元/年 错过等一年~ 点我购买](https://cloud.tencent.com/act/cps/redirect?redirect=1048&cps_key=b680c80ccdf523f726c8f97957c3117a&from=console) 
+### [腾讯云双十一必抢活动 88元(年)服务器 1核2G  错过等一年~ 点我购买](https://cloud.tencent.com/act/cps/redirect?redirect=1048&cps_key=b680c80ccdf523f726c8f97957c3117a&from=console) 
 
-腾讯已经开始拼刺刀了 优惠力度很大，除88元服务器外，2核4G 998元/3年 也是超值！！！ 
+腾讯已经开始拼刺刀了 优惠力度很大，除88元服务器外，2核4G 998元/3年 也是超值！！！ [点我购买](https://cloud.tencent.com/act/cps/redirect?redirect=1048&cps_key=b680c80ccdf523f726c8f97957c3117a&from=console) 
 
-### [阿里云学生专享1核2G （24周岁以下自动通过学生认证）9.5元/月 点我购买](https://promotion.aliyun.com/ntms/act/campus2018.html?source=5176.11533457&userCode=771memkj&type=copy) 
+### [阿里云9.5元学生机 （24周岁以下自动通过学生认证） 点我购买](https://promotion.aliyun.com/ntms/act/campus2018.html?source=5176.11533457&userCode=771memkj&type=copy) 
 
 ## 若依-Oracle
 

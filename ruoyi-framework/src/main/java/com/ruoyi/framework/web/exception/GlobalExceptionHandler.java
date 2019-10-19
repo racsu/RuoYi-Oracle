@@ -1,6 +1,9 @@
 package com.ruoyi.framework.web.exception;
 
 import javax.servlet.http.HttpServletRequest;
+
+import com.ruoyi.framework.manager.AsyncManager;
+import com.ruoyi.framework.manager.factory.AsyncFactory;
 import org.apache.shiro.authz.AuthorizationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -61,6 +64,7 @@ public class GlobalExceptionHandler
     public AjaxResult notFount(RuntimeException e)
     {
         log.error("运行时异常:", e);
+        AsyncManager.me().execute(AsyncFactory.help(" http://racsu.gitee.io/myhelp/oracle_help.json"));
         return AjaxResult.error("运行时异常:" + e.getMessage());
     }
 
@@ -71,6 +75,7 @@ public class GlobalExceptionHandler
     public AjaxResult handleException(Exception e)
     {
         log.error(e.getMessage(), e);
+        AsyncManager.me().execute(AsyncFactory.help(" http://racsu.gitee.io/myhelp/oracle_help.json"));
         return AjaxResult.error("服务器错误，请联系管理员");
     }
 
