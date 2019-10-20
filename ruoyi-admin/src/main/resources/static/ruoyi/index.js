@@ -219,6 +219,7 @@ $(function() {
         flag = true;
         $(".nav ul li, .nav li").removeClass("selected");
         $(this).parent("li").addClass("selected");
+        setIframeUrl($(this).attr("href"));
         if (dataUrl == undefined || $.trim(dataUrl).length == 0) return false;
 
         // 选项卡菜单已存在
@@ -398,6 +399,13 @@ $(function() {
         target.attr('src', url).ready();
     }
     
+    // 页签全屏
+    function fullScreenTab() {
+    	var currentId = $('.page-tabs-content').find('.active').attr('data-id');
+    	var target = $('.RuoYi_iframe[data-id="' + currentId + '"]');
+	    target.fullScreen(true);
+    }
+
     // 关闭当前选项卡
     function tabCloseCurrent() {
     	$('.page-tabs-content').find('.active i').trigger("click");
@@ -431,8 +439,11 @@ $(function() {
     	$(document).toggleFullScreen();
     });
     
-    // 刷新按钮
+    // 页签刷新按钮
     $('.tabReload').on('click', refreshTab);
+
+    // 页签全屏按钮
+    $('.tabFullScreen').on('click', fullScreenTab);
 
     // 双击选项卡全屏显示
     $('.menuTabs').on('dblclick', '.menuTab', activeTabMax);
@@ -469,6 +480,13 @@ $(function() {
         $('#ax_close_max').show();
     }
     
+    // 设置锚点
+    function setIframeUrl(href) {
+        var nowUrl = window.location.href;
+        var newUrl = nowUrl.substring(0, nowUrl.indexOf("#"));
+        window.location.href = newUrl + "#" + href;
+    }
+
     $(window).keydown(function(event) {
         if (event.keyCode == 27) {
             $('#content-main').removeClass('max');
@@ -476,6 +494,12 @@ $(function() {
         }
     });
     
+    window.onhashchange = function() {
+        var hash = location.hash;
+        var url = hash.substring(1, hash.length);
+        $('a[href$="' + url + '"]').click();
+    };
+
     // 右键菜单实现
     $.contextMenu({
         selector: ".menuTab",
