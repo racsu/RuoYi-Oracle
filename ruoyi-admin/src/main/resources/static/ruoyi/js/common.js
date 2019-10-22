@@ -3,7 +3,7 @@
  * Copyright (c) 2019 ruoyi 
  */
 $(function() {
-
+	
 	//  layer扩展皮肤
 	if (window.layer !== undefined) {
 		layer.config({
@@ -11,7 +11,7 @@ $(function() {
 		    skin: 'layer-ext-moon'
 		});
 	}
-
+	
 	// select2复选框事件绑定
 	if ($.fn.select2 !== undefined) {
         $.fn.select2.defaults.set( "theme", "bootstrap" );
@@ -137,7 +137,7 @@ $(function() {
 	// tree表格树 展开/折叠
 	var expandFlag;
 	$("#expandAllBtn").click(function() {
-		var dataExpand = $.common.isEmpty($.table._option.expandAll) ? true : $.table._option.expandAll;
+		var dataExpand = $.common.isEmpty(table.options.expandAll) ? true : table.options.expandAll;
 		expandFlag = $.common.isEmpty(expandFlag) ? dataExpand : expandFlag;
 	    if (!expandFlag) {
 	    	$.bttTable.bootstrapTreeTable('expandAll');
