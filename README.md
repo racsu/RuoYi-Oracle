@@ -1,8 +1,8 @@
-### [腾讯云双十一必抢活动 88元(年)服务器 1核2G  错过等一年~ 点我购买](https://cloud.tencent.com/act/cps/redirect?redirect=1048&cps_key=b680c80ccdf523f726c8f97957c3117a&from=console) 
+### [阿里云双十二必抢活动 89元(年)服务器 1核2G  错过等一年~ 点我购买](https://www.aliyun.com/minisite/goods?userCode=771memkj) 
 
-腾讯已经开始拼刺刀了 优惠力度很大，除88元服务器外，2核4G 998元/3年 也是超值！！！ [点我购买](https://cloud.tencent.com/act/cps/redirect?redirect=1048&cps_key=b680c80ccdf523f726c8f97957c3117a&from=console) 
+### [腾讯云双十二必抢活动 99元(年)服务器 1核2G  错过等一年~ 点我购买](https://cloud.tencent.com/act/cps/redirect?redirect=1040&cps_key=b680c80ccdf523f726c8f97957c3117a&from=console) 
 
-### [阿里云9.5元学生机 （24周岁以下自动通过学生认证） 点我购买](https://promotion.aliyun.com/ntms/act/campus2018.html?source=5176.11533457&userCode=771memkj&type=copy) 
+### [阿里云9.5元学生机 （25周岁以下,无论是否在校，都认定为学生） 点我购买](https://promotion.aliyun.com/ntms/act/campus2018.html?source=5176.11533457&userCode=771memkj&type=copy) 
 
 ## 若依-Oracle
 
@@ -16,15 +16,13 @@
 
 她可以用于所有的Web应用程序，如网站管理后台，网站会员中心，CMS，CRM，OA。所有前端后台代码封装过后十分精简易上手，出错概率低。
 
-## 若依Oracle版本专属交流群 & 微信公众号
+## 若依Oracle版本专属交流群 
 
 &emsp;欢迎进群和各路大佬交流 [![oracle版本交流群](https://img.shields.io/badge/22271299-blue.svg)](https://shang.qq.com/wpa/qunwpa?idkey=e1ea16365440a9fa97ff72b0c73803e49a55dc68ae4c4181f3fb1da74928885e)
-&emsp;&emsp;&emsp;欢迎扫码关注，获取各种学习资料
 
 &ensp;
 <img src="http://img.racinfo.cn/ruoyi-oracle-qun.png" height="350">
-&emsp;&emsp;
-<img src="http://img.racinfo.cn/wxqrcode.png" height="350" style='margin'>
+
 
 
  

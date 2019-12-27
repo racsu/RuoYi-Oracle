@@ -6,18 +6,18 @@
 	
     <groupId>com.ruoyi</groupId>
     <artifactId>ruoyi</artifactId>
-    <version>4.0.0</version>
+    <version>4.1.0</version>
 
-    <name>ruoyi-oracle</name>
+    <name>ruoyi</name>
 	<url>http://www.ruoyi.vip</url>
     <description>若依管理系统</description>
     
     <properties>
-	    <ruoyi.version>4.0.0</ruoyi.version>
+	    <ruoyi.version>4.1.0</ruoyi.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<shiro.version>1.4.1</shiro.version>
+		<shiro.version>1.4.2</shiro.version>
 		<thymeleaf.extras.shiro.version>2.0.0</thymeleaf.extras.shiro.version>
 		<mybatis.boot.version>1.3.2</mybatis.boot.version>
 		<druid.version>1.1.14</druid.version>
@@ -229,6 +229,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>

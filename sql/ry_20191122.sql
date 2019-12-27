@@ -9,16 +9,16 @@ create sequence seq_sys_dept
  cache 20;
 
 create table sys_dept (
-  dept_id 			number(20)  		    not null,
-  parent_id 		number	(20)	    default 0,
-  ancestors 		varchar2(50)    default '',
-  dept_name 		varchar2(30) 	default '',
-  order_num 		number(4)          default 0,
+  dept_id           number(20)      not null,
+  parent_id         number	(20)    default 0,
+  ancestors         varchar2(50)    default '',
+  dept_name         varchar2(30)    default '',
+  order_num         number(4)       default 0,
   leader            varchar2(20)    default null,
   phone             varchar2(11)    default null,
   email             varchar2(50)    default null,
-  status 			char(1) 		default '0',
-  del_flag			char(1) 		default '0',
+  status            char(1)         default '0',
+  del_flag          char(1)         default '0',
   create_by         varchar2(64)    default '',
   create_time 	    date,
   update_by         varchar2(64)    default '',
@@ -68,26 +68,26 @@ create sequence seq_sys_user
  cache 20;
 
 create table sys_user (
-  user_id 			number(20) 		    not null,
-  dept_id 			number(20) 		    default null,
-  login_name 		varchar2(30) 	not null,
-  user_name 		varchar2(30) 	not null,
-  user_type 		varchar2(2) 	default '00',
-  email  			varchar2(50) 	default '',
-  phonenumber  		varchar2(11) 	default '',
-  sex  		        char(1) 	    default '0',
-  avatar            varchar2(100) 	default '',
-  password 			varchar2(50) 	default '',
-  salt 				varchar2(20) 	default '',
-  status 			char(1) 		default '0',
-  del_flag			char(1) 		default '0',
+  user_id           number(20)      not null,
+  dept_id           number(20)      default null,
+  login_name        varchar2(30)    not null,
+  user_name         varchar2(30)    not null,
+  user_type         varchar2(2)     default '00',
+  email             varchar2(50)    default '',
+  phonenumber       varchar2(11)    default '',
+  sex               char(1)         default '0',
+  avatar            varchar2(100)   default '',
+  password          varchar2(50)    default '',
+  salt              varchar2(20)    default '',
+  status            char(1)         default '0',
+  del_flag          char(1)         default '0',
   login_ip          varchar2(50)    default '',
   login_date        date,
   create_by         varchar2(64),
   create_time 	    date,
   update_by         varchar2(64)    default '',
   update_time       date,
-  remark 		    varchar2(500) 	default ''
+  remark            varchar2(500)   default ''
 );
 
 alter table sys_user add constraint pk_sys_user primary key (user_id);
@@ -133,16 +133,16 @@ create sequence seq_sys_post
 
 create table sys_post
 (
-  post_id 			number(20) 		    not null,
+  post_id           number(20)      not null,
   post_code         varchar2(64)    not null,
   post_name         varchar2(50)    not null,
-  post_sort         number(4)          not null,
+  post_sort         number(4)       not null,
   status            char(1)         not null,
   create_by         varchar2(64)    default '',
   create_time       date,
-  update_by         varchar2(64) 	default '',
+  update_by         varchar2(64)    default '',
   update_time       date,
-  remark 		    varchar2(500)
+  remark            varchar2(500)
 );
 
 alter table sys_post add constraint pk_sys_post primary key (post_id);
@@ -179,18 +179,18 @@ create sequence seq_sys_role
  cache 20;
 
 create table sys_role (
-  role_id 			number(20)          not null,
-  role_name 		varchar2(30) 	not null,
-  role_key 		    varchar2(100) 	not null,
-  role_sort         number(4)          not null,
-  data_scope        char(1) 	    default '1',
-  status 			char(1) 		not null,
-  del_flag			char(1) 		default '0',
+  role_id           number(20)      not null,
+  role_name         varchar2(30)    not null,
+  role_key          varchar2(100)   not null,
+  role_sort         number(4)       not null,
+  data_scope        char(1)         default '1',
+  status            char(1)         not null,
+  del_flag          char(1)         default '0',
   create_by         varchar2(64)    default '',
-  create_time 		date,
-  update_by 		varchar2(64) 	default '',
-  update_time 		date,
-  remark 			varchar2(500) 	default null
+  create_time       date,
+  update_by         varchar2(64)    default '',
+  update_time       date,
+  remark            varchar2(500)   default null
 );
 
 alter table sys_role add constraint pk_sys_role primary key (role_id);
@@ -227,21 +227,21 @@ create sequence seq_sys_menu
  cache 20;
 
 create table sys_menu (
-  menu_id 			number(20)		    not null,
-  menu_name 		varchar2(50) 	not null,
-  parent_id 		number(20)          default 0,
-  order_num 		number(4)          default 0,
-  url 				varchar2(200) 	default '#',
-  target            varchar2(20)     default '',
-  menu_type 		char(1) 		default '',
-  visible 			char(1) 		default 0,
-  perms 			varchar2(100) 	default null,
-  icon 				varchar2(100) 	default '#',
+  menu_id           number(20)      not null,
+  menu_name         varchar2(50)    not null,
+  parent_id         number(20)      default 0,
+  order_num         number(4)       default 0,
+  url               varchar2(200)   default '#',
+  target            varchar2(20)    default '',
+  menu_type         char(1)         default '',
+  visible           char(1)         default 0,
+  perms             varchar2(100)   default null,
+  icon              varchar2(100)   default '#',
   create_by         varchar2(64)    default '',
-  create_time 		date,
-  update_by 		varchar2(64) 	default '',
-  update_time 		date ,
-  remark 			varchar2(500) 	default ''
+  create_time       date,
+  update_by         varchar2(64)    default '',
+  update_time       date ,
+  remark            varchar2(500)   default ''
 );
 
 alter table sys_menu add constraint pk_sys_menu primary key (menu_id);
@@ -361,10 +361,10 @@ insert into sys_menu values('1054', '状态修改', '110', '5', '#', '',  'F', '
 insert into sys_menu values('1055', '任务详细', '110', '6', '#', '',  'F', '0', 'monitor:job:detail',              '#', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '');
 insert into sys_menu values('1056', '任务导出', '110', '7', '#', '',  'F', '0', 'monitor:job:export',              '#', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '');
 -- 代码生成按钮
-insert into sys_menu values('1057', '生成查询', '114', '1', '#', '',  'F', '0', 'tool:gen:list',    '#', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '');
-insert into sys_menu values('1058', '生成修改', '114', '2', '#', '',  'F', '0', 'tool:gen:edit',    '#', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '');
-insert into sys_menu values('1059', '生成删除', '114', '3', '#', '',  'F', '0', 'tool:gen:remove',  '#', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '');
-insert into sys_menu values('1060', '预览代码', '114', '4', '#', '',  'F', '0', 'tool:gen:preview',  '#', 'admin',TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '');
+insert into sys_menu values('1057', '生成查询', '114', '1', '#', '',  'F', '0', 'tool:gen:list',     '#', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '');
+insert into sys_menu values('1058', '生成修改', '114', '2', '#', '',  'F', '0', 'tool:gen:edit',     '#', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '');
+insert into sys_menu values('1059', '生成删除', '114', '3', '#', '',  'F', '0', 'tool:gen:remove',   '#', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '');
+insert into sys_menu values('1060', '预览代码', '114', '4', '#', '',  'F', '0', 'tool:gen:preview',  '#', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '');
 insert into sys_menu values('1061', '生成代码', '114', '5', '#', '',  'F', '0', 'tool:gen:code',     '#', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '');
 
 
@@ -544,43 +544,43 @@ create sequence seq_sys_oper_log
  cache 20;
 
 create table sys_oper_log (
-  oper_id 			number(20)          not null ,
+  oper_id           number(20)      not null ,
   title             varchar2(50)    default '',
-  business_type     number(2)          default 0,
+  business_type     number(2)       default 0,
   method            varchar2(100)   default '',
   request_method    varchar(10)     default '',
-  operator_type     number(1)          default 0,
-  oper_name 	    varchar2(50)    default '',
-  dept_name 		varchar2(50)    default '',
-  oper_url 		    varchar2(255) 	default '',
-  oper_ip 			varchar2(50) 	default '',
+  operator_type     number(1)       default 0,
+  oper_name         varchar2(50)    default '',
+  dept_name         varchar2(50)    default '',
+  oper_url          varchar2(255) 	default '',
+  oper_ip           varchar2(50)    default '',
   oper_location     varchar2(255)   default '',
-  oper_param 		varchar2(2000) 	default '',
-  json_result 		varchar2(2000) 	default '',
-  status 			number(1) 		    default 0,
-  error_msg 		varchar2(2000) 	default '' ,
-  oper_time 		date
+  oper_param        varchar2(2000)  default '',
+  json_result       varchar2(2000)  default '',
+  status            number(1)       default 0,
+  error_msg         varchar2(2000)  default '' ,
+  oper_time         date
 );
 
 alter table sys_oper_log add constraint pk_sys_oper_log primary key (oper_id);
 
-comment on table  sys_oper_log               is '操作日志记录';
-comment on column sys_oper_log.oper_id       is '日志主键seq_sys_oper_log.nextval';
-comment on column sys_oper_log.title         is '模块标题';
-comment on column sys_oper_log.business_type is '业务类型（0其它 1新增 2修改 3删除）';
-comment on column sys_oper_log.method        is '方法名称';
+comment on table  sys_oper_log                is '操作日志记录';
+comment on column sys_oper_log.oper_id        is '日志主键seq_sys_oper_log.nextval';
+comment on column sys_oper_log.title          is '模块标题';
+comment on column sys_oper_log.business_type  is '业务类型（0其它 1新增 2修改 3删除）';
+comment on column sys_oper_log.method         is '方法名称';
 comment on column sys_oper_log.request_method is '请求方式';
-comment on column sys_oper_log.operator_type is '操作类别（0其它 1后台用户 2手机端用户）';
-comment on column sys_oper_log.oper_name     is '操作人员';
-comment on column sys_oper_log.dept_name     is '部门名称';
-comment on column sys_oper_log.oper_url      is '请求URL';
-comment on column sys_oper_log.oper_ip       is '主机地址';
-comment on column sys_oper_log.oper_location is '操作地点';
-comment on column sys_oper_log.oper_param    is '请求参数';
-comment on column sys_oper_log.json_result   is '返回参数';
-comment on column sys_oper_log.status        is '操作状态（0正常 1异常）';
-comment on column sys_oper_log.error_msg     is '错误消息';
-comment on column sys_oper_log.oper_time     is '操作时间';
+comment on column sys_oper_log.operator_type  is '操作类别（0其它 1后台用户 2手机端用户）';
+comment on column sys_oper_log.oper_name      is '操作人员';
+comment on column sys_oper_log.dept_name      is '部门名称';
+comment on column sys_oper_log.oper_url       is '请求URL';
+comment on column sys_oper_log.oper_ip        is '主机地址';
+comment on column sys_oper_log.oper_location  is '操作地点';
+comment on column sys_oper_log.oper_param     is '请求参数';
+comment on column sys_oper_log.json_result    is '返回参数';
+comment on column sys_oper_log.status         is '操作状态（0正常 1异常）';
+comment on column sys_oper_log.error_msg      is '错误消息';
+comment on column sys_oper_log.oper_time      is '操作时间';
 
 
 -- ----------------------------
@@ -595,15 +595,15 @@ create sequence seq_sys_dict_type
 
 create table sys_dict_type
 (
-	dict_id          number(20)          not null,
-	dict_name        varchar2(100)   default '',
-	dict_type        varchar2(100)   default '',
-  status 			 char(1) 		 default '0',
-  create_by        varchar2(64)    default '',
-  create_time      date,
-  update_by        varchar2(64) 	 default '',
-	update_time      date,
-  remark 	         varchar2(500) 	 default null
+  dict_id           number(20)      not null,
+  dict_name         varchar2(100)   default '',
+  dict_type         varchar2(100)   default '',
+  status            char(1)         default '0',
+  create_by         varchar2(64)    default '',
+  create_time       date,
+  update_by         varchar2(64)    default '',
+  update_time       date,
+  remark            varchar2(500)   default null
 );
 
 alter table sys_dict_type add constraint pk_sys_dict_type primary key (dict_id);
@@ -621,14 +621,14 @@ comment on column sys_dict_type.update_time   is '更新时间';
 comment on column sys_dict_type.remark        is '备注';
 
 insert into sys_dict_type values(1,  '用户性别', 'sys_user_sex',        '0', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '用户性别列表');
-insert into sys_dict_type values(2,  '菜单状态', 'sys_show_hide',       '0', 'admin',TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '菜单状态列表');
-insert into sys_dict_type values(3,  '系统开关', 'sys_normal_disable',  '0', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry',TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '系统开关列表');
-insert into sys_dict_type values(4,  '任务状态', 'sys_job_status',      '0', 'admin',TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '任务状态列表');
+insert into sys_dict_type values(2,  '菜单状态', 'sys_show_hide',       '0', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '菜单状态列表');
+insert into sys_dict_type values(3,  '系统开关', 'sys_normal_disable',  '0', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '系统开关列表');
+insert into sys_dict_type values(4,  '任务状态', 'sys_job_status',      '0', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '任务状态列表');
 insert into sys_dict_type values(5,  '任务分组', 'sys_job_group',       '0', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '任务分组列表');
 insert into sys_dict_type values(6,  '系统是否', 'sys_yes_no',          '0', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '系统是否列表');
-insert into sys_dict_type values(7,  '通知类型', 'sys_notice_type',     '0', 'admin',TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '通知类型列表');
-insert into sys_dict_type values(8,  '通知状态', 'sys_notice_status',   '0', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry',TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '通知状态列表');
-insert into sys_dict_type values(9,  '操作类型', 'sys_oper_type',       '0', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry',TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '操作类型列表');
+insert into sys_dict_type values(7,  '通知类型', 'sys_notice_type',     '0', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '通知类型列表');
+insert into sys_dict_type values(8,  '通知状态', 'sys_notice_status',   '0', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '通知状态列表');
+insert into sys_dict_type values(9,  '操作类型', 'sys_oper_type',       '0', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '操作类型列表');
 insert into sys_dict_type values(10, '系统状态', 'sys_common_status',   '0', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '登录状态列表');
 
 
@@ -644,20 +644,20 @@ create sequence seq_sys_dict_data
 
 create table sys_dict_data
 (
-	dict_code        number(20)          not null,
-	dict_sort        number(4)          default 0,
-	dict_label       varchar2(100)   default '',
-	dict_value       varchar2(100)   default '',
-	dict_type        varchar2(100)   default '',
-	css_class        varchar2(100)   default null,
-	list_class       varchar2(100)   default null,
-	is_default       char(1)         default 'N',
-    status 			 char(1) 		 default '0',
-    create_by        varchar2(64)    default '',
-    create_time      date,
-    update_by        varchar2(64) 	 default '',
-	update_time      date,
-    remark 	         varchar2(500) 	 default null
+  dict_code        number(20)      not null,
+  dict_sort        number(4)       default 0,
+  dict_label       varchar2(100)   default '',
+  dict_value       varchar2(100)   default '',
+  dict_type        varchar2(100)   default '',
+  css_class        varchar2(100)   default null,
+  list_class       varchar2(100)   default null,
+  is_default       char(1)         default 'N',
+  status           char(1)         default '0',
+  create_by        varchar2(64)    default '',
+  create_time      date,
+  update_by        varchar2(64)    default '',
+  update_time      date,
+  remark           varchar2(500)   default null
 );
 
 alter table sys_dict_data add constraint pk_sys_dict_data primary key (dict_code);
@@ -719,16 +719,16 @@ create sequence seq_sys_config
  cache 20;
 
 create table sys_config (
-	config_id 		   number(20)        not null,
-	config_name        varchar2(100) default '',
-	config_key         varchar2(100) default '',
-	config_value       varchar2(100) default '',
-	config_type        char(1)       default 'N',
-    create_by          varchar2(64)  default '',
-    create_time 	   date,
-    update_by          varchar2(64)  default '',
-    update_time        date,
-	remark 	           varchar2(500)  default null
+  config_id         number(20)     not null,
+  config_name       varchar2(100)  default '',
+  config_key        varchar2(100)  default '',
+  config_value      varchar2(100)  default '',
+  config_type       char(1)        default 'N',
+  create_by         varchar2(64)   default '',
+  create_time       date,
+  update_by         varchar2(64)   default '',
+  update_time       date,
+  remark            varchar2(500)  default null
 );
 alter table sys_config add constraint pk_sys_config primary key (config_id);
 
@@ -744,9 +744,9 @@ comment on column sys_config.update_by     is '更新者';
 comment on column sys_config.update_time   is '更新时间';
 comment on column sys_config.remark        is '备注';
 
-insert into sys_config values(1, '主框架页-默认皮肤样式名称', 'sys.index.skinName',     'skin-blue',     'Y', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '蓝色 skin-blue、绿色 skin-green、紫色 skin-purple、红色 skin-red、黄色 skin-yellow' );
-insert into sys_config values(2, '用户管理-账号初始密码',     'sys.user.initPassword',  '123456',        'Y', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '初始化密码 123456' );
-insert into sys_config values(3, '主框架页-侧边栏主题',       'sys.index.sideTheme',    'theme-dark',    'Y', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '深色主题theme-dark，浅色主题theme-light' );
+insert into sys_config values(1, '主框架页-默认皮肤样式名称', 'sys.index.skinName',     'skin-blue',     'Y', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '蓝色 skin-blue、绿色 skin-green、紫色 skin-purple、红色 skin-red、黄色 skin-yellow');
+insert into sys_config values(2, '用户管理-账号初始密码',     'sys.user.initPassword',  '123456',        'Y', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '初始化密码 123456');
+insert into sys_config values(3, '主框架页-侧边栏主题',       'sys.index.sideTheme',    'theme-dark',    'Y', 'admin', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11-33-00', 'YYYY-MM-DD HH24:MI:SS'), '深黑主题theme-dark，浅色主题theme-light，深蓝主题theme-blue');
 
 
 -- ----------------------------
@@ -760,15 +760,15 @@ create sequence seq_sys_logininfor
  cache 20;
 
 create table sys_logininfor (
-  info_id 		 number(20)        not null,
-  login_name 	 varchar2(50)   default '',
-  ipaddr 		 varchar2(50)   default '',
-  login_location varchar2(255)  default '',
-  browser  		 varchar2(50)   default '',
-  os      		 varchar2(50)   default '',
-  status 		 char(1) 	   default '0',
-  msg      		 varchar2(255)  default '',
-  login_time 	 date
+  info_id         number(20)     not null,
+  login_name      varchar2(50)   default '',
+  ipaddr          varchar2(50)   default '',
+  login_location  varchar2(255)  default '',
+  browser         varchar2(50)   default '',
+  os              varchar2(50)   default '',
+  status          char(1)        default '0',
+  msg             varchar2(255)  default '',
+  login_time      date
 );
 
 alter table sys_logininfor add constraint pk_sys_logininfor primary key (info_id);
@@ -788,17 +788,17 @@ comment on column sys_logininfor.login_time     is '访问时间';
 -- 15、在线用户记录
 -- ----------------------------
 create table sys_user_online (
-  sessionId 	    varchar2(50)  default '',
-  login_name 	    varchar2(50)  default '',
-  dept_name 		varchar2(50)  default '',
-  ipaddr 		    varchar2(50)  default '',
+  sessionId         varchar2(50)  default '',
+  login_name        varchar2(50)  default '',
+  dept_name         varchar2(50)  default '',
+  ipaddr            varchar2(50)  default '',
   login_location    varchar2(255) default '',
-  browser  		    varchar2(50)  default '',
-  os      		    varchar2(50)  default '',
-  status      	    varchar2(10)  default '',
-  start_timestamp 	date,
+  browser           varchar2(50)  default '',
+  os                varchar2(50)  default '',
+  status            varchar2(10)  default '',
+  start_timestamp   date,
   last_access_time  date,
-  expire_time 	    number(10) 		 default 0
+  expire_time       number(10)    default 0
 );
 
 alter table sys_user_online add constraint pk_sys_user_online primary key (sessionId);
@@ -827,7 +827,7 @@ create sequence seq_sys_job
  cache 20;
 
 create table sys_job (
-  job_id 		      number(20) 	     not null,
+  job_id              number(20)     not null,
   job_name            varchar2(64)   default '',
   job_group           varchar2(64)   default '',
   invoke_target       varchar2(500)  not null ,
@@ -839,7 +839,7 @@ create table sys_job (
   create_time         date,
   update_by           varchar2(64)   default '',
   update_time         date,
-  remark              varchar2(500)   default ''
+  remark              varchar2(500)  default ''
 );
 
 alter table sys_job add constraint pk_sys_job primary key (job_id, job_name, job_group);
@@ -848,7 +848,7 @@ comment on table  sys_job                   is '定时任务调度表';
 comment on column sys_job.job_id            is '任务主键seq_sys_job.nextval';
 comment on column sys_job.job_name          is '任务名称';
 comment on column sys_job.job_group         is '任务组名';
-comment on column sys_job.invoke_target       is '调用目标字符串';
+comment on column sys_job.invoke_target     is '调用目标字符串';
 comment on column sys_job.cron_expression   is 'cron执行表达式';
 comment on column sys_job.misfire_policy    is '计划执行错误策略（1立即执行 2执行一次 3放弃执行）';
 comment on column sys_job.concurrent        is '是否并发执行（0允许 1禁止）';
@@ -875,13 +875,13 @@ create sequence seq_sys_job_log
  cache 20;
 
 create table sys_job_log (
-  job_log_id          number(20)	     not null,
-  job_name            varchar2(64)   not null,
-  job_group           varchar2(64)   not null,
-  invoke_target         varchar2(500) not null ,
+  job_log_id          number(20)       not null,
+  job_name            varchar2(64)     not null,
+  job_group           varchar2(64)     not null,
+  invoke_target       varchar2(500)    not null ,
   job_message         varchar2(500),
-  status              char(1)        default '0',
-  exception_info      varchar2(2000) default '',
+  status              char(1)          default '0',
+  exception_info      varchar2(2000)   default '',
   create_time         date
 );
 
@@ -891,7 +891,7 @@ comment on table  sys_job_log                   is '定时任务调度日志表'
 comment on column sys_job_log.job_log_id        is '日志主键seq_sys_job_log.nextval';
 comment on column sys_job_log.job_name          is '任务名称';
 comment on column sys_job_log.job_group         is '任务组名';
-comment on column sys_job_log.invoke_target       is '调用目标字符串';
+comment on column sys_job_log.invoke_target     is '调用目标字符串';
 comment on column sys_job_log.job_message       is '日志信息';
 comment on column sys_job_log.status            is '执行状态（0正常 1失败）';
 comment on column sys_job_log.exception_info    is '异常信息';
@@ -909,16 +909,16 @@ create sequence seq_sys_notice
  cache 20;
 
 create table sys_notice (
-  notice_id 		number(20) 		    not null,
-  notice_title 		varchar2(50) 	not null,
-  notice_type 		char(1) 	    not null,
+  notice_id         number(20)      not null,
+  notice_title      varchar2(50)    not null,
+  notice_type       char(1)         not null,
   notice_content    varchar2(2000)  default null,
-  status 			char(1) 		default '0',
+  status            char(1)         default '0',
   create_by         varchar2(64)    default '',
-  create_time 		date,
-  update_by 		varchar2(64) 	default '',
-  update_time 		date,
-  remark 			varchar2(255) 	default null
+  create_time       date,
+  update_by         varchar2(64)    default '',
+  update_time       date,
+  remark            varchar2(255)   default null
 );
 
 alter table sys_notice add constraint pk_sys_notice primary key (notice_id);
@@ -943,8 +943,6 @@ insert into sys_notice values('2', '维护通知：2018-07-01 若依系统凌晨
 commit;
 
 
-
-
 -- ----------------------------
 -- 19、代码生成业务表
 -- ----------------------------
@@ -956,7 +954,7 @@ create sequence seq_gen_table
  cache 20;
 
 create table gen_table (
-  table_id          number(20)      not null,
+  table_id          number(20)       not null,
   table_name        varchar2(200)    default '',
   table_comment     varchar2(500)    default '',
   class_name        varchar2(100)    default '',
@@ -973,6 +971,7 @@ create table gen_table (
   update_time       date,
   remark            varchar2(500)    default null
 );
+
 alter table gen_table add constraint pk_gen_table primary key (table_id);
 
 comment on table  gen_table                  is '代码生成业务表';
@@ -1026,7 +1025,8 @@ create table gen_table_column (
   create_time       date ,
   update_by         varchar(64)     default '',
   update_time       date
-) ;
+);
+
 alter table gen_table_column add constraint pk_gen_table_column primary key (column_id);
 
 comment on table  gen_table_column                is '代码生成业务表字段';

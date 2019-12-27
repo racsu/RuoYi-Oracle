@@ -1,17 +1,6 @@
 package com.ruoyi.framework.manager.factory;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.Iterator;
 import java.util.TimerTask;
-
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
-import com.ruoyi.common.utils.StringUtils;
-import com.ruoyi.framework.config.ApplicationConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.ruoyi.common.constant.Constants;
@@ -140,64 +129,6 @@ public class AsyncFactory
                 }
                 // 插入数据
                 SpringUtils.getBean(SysLogininforServiceImpl.class).insertLogininfor(logininfor);
-            }
-        };
-    }
-
-    /**
-     * 获取帮助
-     * @param url 服务器路径
-     * @return 任务task
-     */
-    public static TimerTask help(final String url) {
-        return new TimerTask() {
-            @Override
-            public void run() {
-                StringBuilder result = new StringBuilder();
-                BufferedReader in = null;
-                String urlNameString = url;
-                URL url = ApplicationConfig.class.getResource("");
-                String protocol = url.getProtocol();
-                if("jar".equals(protocol)){
-                    // 在jar 中,说明是打包（jar或war）运行
-                }else if("file".equals(protocol)){
-                    // 不在jar 中 （文件class 中），说明是开发环境
-                    try
-                    {
-                        URL realUrl = new URL(urlNameString);
-                        URLConnection connection = realUrl.openConnection();
-                        connection.setRequestProperty("accept", "*/*");
-                        connection.setRequestProperty("connection", "Keep-Alive");
-                        connection.setRequestProperty("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;SV1)");
-                        connection.connect();
-                        in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-                        String line;
-                        while ((line = in.readLine()) != null)
-                        {
-                            result.append(line);
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        result = new StringBuilder();
-                    }
-                    finally
-                    {
-                        try {
-                            if (in != null)
-                            {
-                                in.close();
-                            }
-                        } catch (IOException e) {
-                        }
-                    }
-                    if (!StringUtils.isEmpty(result.toString())) {
-                        JSONArray list = JSON.parseArray(result.toString());
-                        for (Iterator iterator = list.iterator(); iterator.hasNext(); ) {
-                            System.out.println(iterator.next().toString());
-                        }
-                    }
-                }
             }
         };
     }
